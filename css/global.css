@@ -1,0 +1,36 @@
+#moviesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+#moviesContainer article {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#moviesContainer img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#moviesContainer h3 {
+    margin-bottom: 0.5rem;
+}
+
+.movie-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.editButton,
+.deleteButton {
+    flex: 1;
+    padding: 0.5rem;
+    cursor: pointer;
+}

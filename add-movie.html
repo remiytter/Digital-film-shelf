@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movie | Digital Film Shelf</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+
+    <header>
+        <h1>Digital Film Shelf</h1>
+
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/collection.html">My Collection</a>
+            <button id="logoutButton">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add Movie</h2>
+
+            <form id="movieForm">
+
+                <label for="title">Title</label>
+                <input type="text" id="title" required>
+
+                <label for="director">Director</label>
+                <input type="text" id="director">
+
+                <label for="genre">Genre</label>
+                <input type="text" id="genre">
+
+                <label for="format">Format</label>
+                <select id="format">
+                    <option value="">Select format</option>
+                    <option value="DVD">DVD</option>
+                    <option value="Blu-ray">Blu-ray</option>
+                    <option value="4K UHD">4K UHD</option>
+                    <option value="Steelbook">Steelbook</option>
+                    <option value="Digital">Digital</option>
+                </select>
+
+                <label for="specialEdition">Special Edition</label>
+                <input
+                    type="text"
+                    id="specialEdition"
+                    placeholder="Criterion, Arrow, Collection etc."
+                >
+
+                <label for="releaseYear">Release Year</label>
+                <input type="number" id="releaseYear">
+
+                <label for="coverUrl">Cover Image URL</label>
+                <input type="url" id="coverUrl">
+
+                <label>
+                    <input type="checkbox" id="isPublic" checked>
+                    Make this movie public
+                </label>
+
+                <button type="submit">Add Movie</button>
+
+            </form>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/supabase.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/add-movie.js"></script>
+
+</body>
+</html>
