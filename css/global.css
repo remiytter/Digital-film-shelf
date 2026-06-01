@@ -34,3 +34,13 @@
     padding: 0.5rem;
     cursor: pointer;
 }
+
+.collection-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    flex: 1;
+}

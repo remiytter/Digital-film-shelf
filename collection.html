@@ -17,6 +17,7 @@
         <nav>
             <a href="/index.html">Home</a>
             <a href="/add-movie.html">Add Movie</a>
+            <a href="/public-collections.html">Public Collections</a>
             <button id="logoutButton">Logout</button>
         </nav>
     </header>
@@ -26,8 +27,32 @@
             <h2>My Collection</h2>
             <p id="userEmail"></p>
 
-            <div id="moviesContainer">
+            <div class="collection-controls">
+
+                <input type="text" id="searchInput" placeholder="Search movies, directors or genres...">
+
+                <select id="formatFilter">
+                    <option value="all">All formats</option>
+                    <option value="DVD">DVD</option>
+                    <option value="Blu-ray">Blu-ray</option>
+                    <option value="4K UHD">4K UHD</option>
+                    <option value="Steelbook">Steelbook</option>
+                    <option value="Digital">Digital</option>
+                </select>
+
+                <label for="sortSelect">Sort by:</label>
+
+                <select id="sortSelect">
+                    <option value="title-asc">Title (A-Z)</option>
+                    <option value="title-desc">Title (Z-A)</option>
+                    <option value="year-desc">Newest First</option>
+                    <option value="year-asc">Oldest First</option>
+                </select>
+
             </div>
+
+            <div id="moviesContainer"></div>
+
         </section>
     </main>
 
